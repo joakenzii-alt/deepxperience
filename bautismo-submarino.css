@@ -907,3 +907,7 @@ body.bautismo-page {
         transition: none;
     }
 }
+
+
+/* Fix: styles.css deja el body con opacity 0 hasta que main.js lo muestra; esta pagina no carga main.js */
+body.bautismo-page { opacity: 1 !important; }
