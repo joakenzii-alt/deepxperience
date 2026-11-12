@@ -81,10 +81,10 @@
     const status = document.getElementById("form-status");
 
     const emailConfig = {
-        publicKey: "6IiDwhK_bmdHp7u3d",
-        serviceId: "service_siovfrr",
-        userTemplate: "template_user_confirmati",
-        adminTemplate: "template_admin_notificat",
+        publicKey: "6T872gC10rVj5BV93",
+        serviceId: "service_dy1n0jr",
+        userTemplate: "template_cliente_reserva",
+        adminTemplate: "template_admin_reserva",
     };
 
     if (window.emailjs && emailConfig.publicKey) {
@@ -172,14 +172,14 @@
             }),
             submission_date: new Date().toLocaleString("es-CL"),
             message_preview: `Nueva solicitud Bautismo Submarino: ${lead.nombre} - ${lead.fecha_preferida || "Sin fecha"} - ${lead.num_personas || "1"} personas`,
-            cc_email: "joaquinurzuad@gmail.com",
+            cc_email: "",
         };
 
         await Promise.all([
             window.emailjs.send(emailConfig.serviceId, emailConfig.userTemplate, templateParams),
             window.emailjs.send(emailConfig.serviceId, emailConfig.adminTemplate, {
                 ...templateParams,
-                to_email: "info@deepxperience.cl",
+                to_email: "joaquin@deepxperiences.cl",
             }),
         ]);
     };
