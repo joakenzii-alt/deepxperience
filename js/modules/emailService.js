@@ -13,14 +13,14 @@ export class EmailService {
   constructor() {
     // ⚠️ CONFIGURAR ESTAS CREDENCIALES DE EMAILJS
     this.config = {
-      publicKey: "6IiDwhK_bmdHp7u3d",
-      serviceId: "service_siovfrr",
+      publicKey: "6T872gC10rVj5BV93",
+      serviceId: "service_dy1n0jr",
 
       // Template para confirmación al usuario
-      templateUserConfirmation: "template_user_confirmati",
+      templateUserConfirmation: "template_cliente_reserva",
 
       // Template para notificación a DeepXperience
-      templateAdminNotification: "template_admin_notificat",
+      templateAdminNotification: "template_admin_reserva",
     };
 
     this.isConfigured = false;
@@ -114,8 +114,8 @@ export class EmailService {
 
     const templateParams = {
       // Destinatarios
-      to_email: "info@deepxperience.cl",
-      cc_email: "joaquinurzuad@gmail.com",
+      to_email: "joaquin@deepxperiences.cl",
+      cc_email: "",
 
       // Información Personal
       user_name: userData.nombre,
